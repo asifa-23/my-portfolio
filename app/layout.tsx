@@ -8,12 +8,13 @@ export const metadata = {
   description: 'Full Stack Developer Portfolio',
 }
 
-export default function RootLayout({ children }) {
+import { PropsWithChildren } from 'react';
+
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
-  )
+  );
 }
+
