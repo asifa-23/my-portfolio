@@ -24,7 +24,7 @@ export default function Contact() {
     }, 1000)
   }
 
-  const handleChange = (e ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
@@ -41,10 +41,10 @@ export default function Contact() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="section-title">Let's build something amazing together!</h2>
+        <h2 className="section-title">{"Let's build something amazing together!"}</h2>
         <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
-          I'm actively looking for full-time Java Full Stack Developer opportunities. 
-          Feel free to reach out for collaborations or just a friendly chat! 👋
+          {"I'm actively looking for full-time Java Full Stack Developer opportunities. "}
+          {"Feel free to reach out for collaborations or just a friendly chat! 👋"}
         </p>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -56,10 +56,10 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
-              Let's talk about everything!
+              {"Let's talk about everything!"}
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-8">
-              Don't like forms? Send me an email or reach out on social media. 👋
+              {"Don't like forms? Send me an email or reach out on social media. 👋"}
             </p>
 
             <div className="space-y-6">
@@ -150,7 +150,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows="5"
+                  rows={5}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                   placeholder="Your message..."
                 />
