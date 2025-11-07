@@ -12,7 +12,7 @@ export default function Contact() {
   })
   const [status, setStatus] = useState('')
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setStatus('sending')
     
@@ -24,7 +24,7 @@ export default function Contact() {
     }, 1000)
   }
 
-  const handleChange = (e) => {
+  const handleChange = (e ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
